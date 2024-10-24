@@ -1,0 +1,284 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(87deg, #FFDB60 33.33%, #23A2C7 33.33% 66.66%, #F5663D 66.66%);
+    padding: 2rem 1rem; /* Increased padding */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 150px; /* Adjust this value to make the header taller or shorter as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, white 3px, transparent 4px);
+    background-size: 24px 24px;
+    opacity: 0.4;
+}
+
+.logo {
+    max-width: 350px; /* Increased max-width for a larger logo */
+    width: 100%; /* This ensures the logo is responsive */
+    height: auto;
+    display: block;
+    position: relative; /* To appear above the background pattern */
+    z-index: 1;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.main-title.montserrat { font-family: 'Montserrat', sans-serif; }
+
+nav {
+    background-color: hsl(45, 53%, 94%);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav a {
+    color: #000435;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000435;
+}
+
+nav a:nth-child(1):hover::before {
+    background-color: #FFDB60;
+}
+
+nav a:nth-child(2):hover::before {
+    background-color: #23A2C7;
+}
+
+nav a:nth-child(3):hover::before {
+    background-color: #F5663D;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    height: 550px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    text-align: left;
+}
+
+.carousel-title,
+.carousel-subtitle {
+    display: inline-block;
+    padding: 15px 10px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    color: #000435; /* dark blue color */
+    font-weight: bold;
+}
+
+.carousel-title {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-subtitle {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    color: #534f4e;
+    z-index: 1;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: -10px; /* Overlap with the title */
+    padding-top: 20px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+main {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex-basis: calc(33% - 1rem);
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+    font-family: 'Playfair Display', serif;
+    color: #23A2C7;
+}
+
+footer {
+    background-color: #f9f7f6;
+    color: #000435;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #23A2C7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+.about-section {
+    transition: background-color 0.3s ease;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.about-section:hover {
+    background-color: hsl(45, 53%, 94%);
+}
+
+.contact-button:hover {
+    background-color: #1c8aa8;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 400px;
+    }
+    
+    .carousel-text {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .carousel-title {
+        font-size: 24px;
+    }
+    
+    .carousel-subtitle {
+        font-size: 18px;
+    }
+
+    .carousel-buttons {
+        right: 10px;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+    
+    .service {
+        flex-basis: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

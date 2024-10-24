@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunoma Painting Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="main-title montserrat">Lunoma Painting</h1>
+    </header> -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lunoma Painting Services</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="LunP.png" alt="Lunoma Painting" class="logo">
+        </header>
+        <nav>
+             <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About Us</a>
+        </nav>
+        
+        <!-- Image Carousel -->
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="91B413B8-.jpg" alt="Interior Painting">
+            </div>
+            <div class="carousel-slide">
+                <img src="IMG_0891.jpg" alt="Exterior Painting">
+            </div>
+            <div class="carousel-slide">
+                <img src="IMG_0893.jpg" alt="Home Renovation">
+            </div>
+            <div class="carousel-slide">
+                <img src="IMG_0894.jpg" alt="Custom Design">
+            </div>
+            <div class="carousel-slide">
+                <img src="IMG_0921.jpg" alt="Home Transformation">
+            </div>
+            <div class="carousel-slide">
+                <img src="IMG_3688.jpg" alt="Additional Service">
+            </div>
+            <div class="carousel-text">
+                <h2 class="carousel-title">Transform Your Space</h2>
+                <p class="carousel-subtitle">With Expert Painting Services</p>
+            </div>
+            <div class="carousel-buttons">
+                <a href="#" class="carousel-button left">&lt;</a>
+                <a href="#" class="carousel-button right">&gt;</a>
+            </div>
+        </div>
+
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Interior Painting</h3>
+                    <p>Transform your home's interior with our expert painting services.</p>
+                </div>
+                <div class="service">
+                    <h3>Exterior Painting</h3>
+                    <p>Enhance your home's curb appeal with our durable exterior finishes.</p>
+                </div>
+                <div class="service">
+                    <h3>Commercial Painting</h3>
+                    <p>Professional painting solutions for businesses of all sizes.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>Located in the heart of Tampa, Florida, Lunoma Painting has been transforming spaces across the Tampa Bay area since 2019. Our team of skilled artisans brings years of expertise to every project, whether it's a cozy home or a sprawling commercial complex.</p>
+            <p>We take pride in our commitment to excellence, using only premium-quality paints and materials to ensure durable, stunning finishes that stand the test of time. Our attention to detail and dedication to customer satisfaction have earned us the trust of numerous homeowners, businesses, and institutions throughout Central Florida.</p>
+            <p>From historic restorations in Ybor City to modern office spaces in downtown Tampa, our versatility and professionalism have made us a go-to painting service for clients who demand the best. We're not just painters; we're partners in bringing your vision to life, one brushstroke at a time.</p>
+            <p font-size: 14px>LOCATION: 8708 N Newport ave, Tampa, FL 33604</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lunoma Painting Services. All rights reserved.</p>
+    </footer>
+    <a href="#contact" class="contact-button">Contact</a>
+
+    <script>
+        // Carousel JavaScript
+        const slides = document.querySelectorAll('.carousel-slide');
+        const leftButton = document.querySelector('.carousel-button.left');
+        const rightButton = document.querySelector('.carousel-button.right');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        leftButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            previousSlide();
+        });
+
+        rightButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            nextSlide();
+        });
+
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>
